@@ -1,0 +1,179 @@
+2019-04-15 08:17:57.046421
+
+
+
+PING 137.164.34.254 (137.164.34.254): 8972 data bytes
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--- 137.164.34.254 ping statistics ---
+50 packets transmitted, 50 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 9.890/13.177/70.944/11.345 ms
+
+
+show isis adjacency detail
+yub-cc-5
+  Interface: xe-0/1/0.0, Level: 2, State: Up, Expires in 8 secs
+  Priority: 0, Up/Down transitions: 1, Last transition: 1w3d 18:21:53 ago
+  Circuit type: 2, Speaks: IP, IPv6
+  Topologies: Unicast, IPV6-Unicast
+  Restart capable: Yes, Adjacency advertisement: Advertise
+  IP addresses: 137.164.34.254
+  IPv6 addresses: fe80::da18:d3ff:fe11:200b
+
+woo-cc-2
+  Interface: xe-0/1/1.0, Level: 2, State: Up, Expires in 6 secs
+  Priority: 0, Up/Down transitions: 1, Last transition: 1w3d 18:21:54 ago
+  Circuit type: 2, Speaks: IP, IPv6
+  Topologies: Unicast, IPV6-Unicast
+  Restart capable: Yes, Adjacency advertisement: Advertise
+  IP addresses: 137.164.34.252
+  IPv6 addresses: fe80::b233:a6ff:fe67:7838
+
+sac-agg4
+  Interface: xe-0/1/4.0, Level: 2, State: Up, Expires in 8 secs
+  Priority: 0, Up/Down transitions: 1, Last transition: 1w3d 18:22:25 ago
+  Circuit type: 2, Speaks: IP, IPv6
+  Topologies: Unicast, IPV6-Unicast
+  Restart capable: Yes, Adjacency advertisement: Advertise
+  IP addresses: 137.164.32.42
+  IPv6 addresses: fe80::86b2:61ff:fe51:c84
+
+
+show interface xe-0/1/0 extensive 
+Physical interface: xe-0/1/0, Enabled, Physical link is Up
+  Interface index: 143, SNMP ifIndex: 534, Generation: 146
+  Description: 10G to yub-cc-5 xe-0/1/0 CLR-16059
+  Link-level type: Ethernet, MTU: 9014, MRU: 9022, LAN-PHY mode, Speed: 10Gbps, BPDU Error: None, Loop Detect PDU Error: None, MAC-REWRITE Error: None, Loopback: None, Source filtering: Disabled, Flow control: Enabled, Speed Configuration: Auto
+  Pad to minimum frame size: Disabled
+  Device flags   : Present Running
+  Interface flags: SNMP-Traps Internal: 0x4000
+  Link flags     : None
+  CoS queues     : 8 supported, 8 maximum usable queues
+  Schedulers     : 0
+  Hold-times     : Up 0 ms, Down 0 ms
+  Damping        : half-life: 0 sec, max-suppress: 0 sec, reuse: 0, suppress: 0, state: unsuppressed
+  Current address: b0:33:a6:66:bb:83, Hardware address: b0:33:a6:66:bb:83
+  Last flapped   : 2019-04-04 13:55:27 PDT (1w3d 18:22 ago)
+  Statistics last cleared: Never
+  Traffic statistics:
+   Input  bytes  :           2571257786              1803920 bps
+   Output bytes  :           3672592567              1802616 bps
+   Input  packets:             15350533                   30 pps
+   Output packets:             13591536                   27 pps
+   IPv6 transit statistics:
+   Input  bytes  :            183677725
+   Output bytes  :            439388383
+   Input  packets:              2198951
+   Output packets:              2197780
+  Dropped traffic statistics due to STP State:
+   Input  bytes  :                    0
+   Output bytes  :                    0
+   Input  packets:                    0
+   Output packets:                    0
+  Input errors:
+    Errors: 0, Drops: 0, Framing errors: 0, Runts: 0, Policed discards: 0, L3 incompletes: 0, L2 channel errors: 0, L2 mismatch timeouts: 0, FIFO errors: 0, Resource errors: 0
+  Output errors:
+    Carrier transitions: 1, Errors: 0, Drops: 0, Collisions: 0, Aged packets: 0, FIFO errors: 0, HS link CRC errors: 0, MTU errors: 0, Resource errors: 0
+  Egress queues: 8 supported, 4 in use
+  Queue counters:       Queued packets  Transmitted packets      Dropped packets
+    0                          5110867              5110867                    0
+    1                                0                    0                    0
+    2                                0                    0                    0
+    3                          8480610              8480610                    0
+  Queue number:         Mapped forwarding classes
+    0                   best-effort
+    1                   expedited-forwarding
+    2                   assured-forwarding
+    3                   network-control
+  Active alarms  : None
+  Active defects : None
+  PCS statistics                      Seconds
+    Bit errors                             1
+    Errored blocks                         1
+  MAC statistics:                      Receive         Transmit
+    Total octets                    2813830078       3878996738
+    Total packets                     15350529         13591529
+    Unicast packets                   11945170         12003390
+    Broadcast packets                      419              431
+    Multicast packets                  3404940          1587708
+    CRC/Align errors                         0                0
+    FIFO errors                              0                0
+    MAC control frames                       0                0
+    MAC pause frames                         0                0
+    Oversized frames                         0
+    Jabber frames                            0
+    Fragment frames                          0
+    VLAN tagged frames                       0
+    Code violations                          0
+    Total errors                             0                0
+  Filter statistics:
+    Input packet count                15350529
+    Input packet rejects                932488
+    Input DA rejects                         0
+    Input SA rejects                         0
+    Output packet count                                13591529
+    Output packet pad count                                   0
+    Output packet error count                                 0
+    CAM destination filters: 0, CAM source filters: 0
+  Packet Forwarding Engine configuration:
+    Destination slot: 0 (0x00)
+  CoS information:
+    Direction : Output
+    CoS transmit queue               Bandwidth               Buffer Priority   Limit
+                              %            bps     %           usec
+    0 best-effort            95     9500000000    95              0      low    none
+    3 network-control         5      500000000     5              0      low    none
+  Preclassifier statistics:
+    Traffic Class        Received Packets   Transmitted  Packets      Dropped Packets
+    real-time                           0                      0                    0
+    network-control               9792825                9792825                    0
+    best-effort                   5557665                5557665                    0
+  Interface transmit statistics: Disabled
+
+  Logical interface xe-0/1/0.0 (Index 332) (SNMP ifIndex 547) (Generation 141)
+    Flags: Up SNMP-Traps 0x4004000 Encapsulation: ENET2
+    Traffic statistics:
+     Input  bytes  :           2571257846
+     Output bytes  :           3660614779
+     Input  packets:             15350534
+     Output packets:             13591536
+     IPv6 transit statistics:
+     Input  bytes  :            183677725
+     Output bytes  :            439388383
+     Input  packets:              2198951
+     Output packets:              2197780
+    Local statistics:
+     Input  bytes  :           1067576349
+     Output bytes  :            984299956
+     Input  packets:              1954892
+     Output packets:              1996298
+    Transit statistics:
+     Input  bytes  :           1503681497                 6736 bps
+     Output bytes  :           2676314823                 1408 bps
+     Input  packets:             13395642                    5 pps
+     Output packets:             11595238                    2 pps
+     IPv6 transit statistics:
+      Input  bytes  :           183677725                  792 bps
+      Output bytes  :           439388383                  640 bps
+      Input  packets:             2198951                    1 pps
+      Output packets:             2197780                    1 pps
+    Protocol inet, MTU: 9000
+    Max nh cache: 100000, New hold nh limit: 100000, Curr nh cnt: 1, Curr new hold cnt: 0, NH drop cnt: 0
+    Generation: 162, Route table: 0
+      Flags: Sendbcast-pkt-to-re, Is-Primary
+      Addresses, Flags: Is-Preferred Is-Primary
+        Destination: 137.164.34.254/31, Local: 137.164.34.255, Broadcast: Unspecified, Generation: 144
+    Protocol iso, MTU: 8997, Generation: 163, Route table: 0
+      Flags: Is-Primary
+    Protocol inet6, MTU: 9000
+    Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 2, Curr new hold cnt: 0, NH drop cnt: 0
+    Generation: 164, Route table: 0
+      Flags: Is-Primary
+      Addresses, Flags: Is-Preferred Is-Primary
+        Destination: 2607:f380::118:9a42:2fe0/123, Local: 2607:f380::118:9a42:2ff1
+    Generation: 146
+      Addresses, Flags: Is-Preferred
+        Destination: fe80::/64, Local: fe80::b233:a6ff:fe66:bb83
+    Protocol multiservice, MTU: Unlimited, Generation: 148
+    Generation: 165, Route table: 0
+      Flags: Is-Primary
+      Policer: Input: __default_arp_policer__

@@ -1,0 +1,51 @@
+2019-03-10 11:53:51.952509
+
+
+Type escape sequence to abort.
+Sending 50, 9000-byte ICMP Echos to 137.164.3.18, timeout is 2 seconds:
+Packet sent with a source address of 137.164.3.19 
+Packet sent with the DF bit set
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Success rate is 100 percent (50/50), round-trip min/avg/max = 3/3/4 ms
+
+show clns neighbor GigabitEthernet0/0/0 detail
+Tag null:
+System Id      Interface   SNPA                State  Holdtime  Type Protocol
+lax-agg6       Gi0/0/0     f07f.0613.fdb0      Up     8         L2   M-ISIS
+  Area Address(es): 49.2152.1371.6401.8000
+  IP Address(es):  137.164.3.18*
+  IPv6 Address(es): FE80::F27F:6FF:FE13:FDB0
+  Uptime: 1y2w
+  NSF capable
+  Topology: IPv4, IPv6
+  Interface name: GigabitEthernet0/0/0
+
+show interface GigabitEthernet0/0/0GigabitEthernet0/0/0 is up, line protocol is up 
+  Hardware is BUILT-IN-2T+6X1GE, address is 84b2.61cc.9802 (bia 84b2.61cc.9802)
+  Description: To lax-agg6 g100/0/0/23 CLR-2961
+  Internet address is 137.164.3.19/29
+  MTU 9000 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 5/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported 
+  Full Duplex, 1000Mbps, link type is auto, media type is SX
+  output flow-control is on, input flow-control is on
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:00, output 00:00:02, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 1/375/3311/955 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: Class-based queueing
+  Output queue: 0/40 (size/max)
+  30 second input rate 21769000 bits/sec, 3016 packets/sec
+  30 second output rate 7078000 bits/sec, 1855 packets/sec
+     1328542956257 packets input, 1180970390694557 bytes, 0 no buffer
+     Received 26076458 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     1 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 113460492 multicast, 0 pause input
+     1410835794097 packets output, 1352572959837676 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
